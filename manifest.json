@@ -1,0 +1,26 @@
+
+{
+	"manifest_version": 2,
+
+
+	"name": "MySearch",
+	"description": "This extension allows the user to upvote/downvote webpages on relevency to the search term",
+	"version": "1.0",
+
+	"content_scripts": [
+		{
+			"matches": ["https://*/*"],
+			"js": ["content-script.js"]
+		}
+	],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"activeTab",
+		"storage",
+    "http://commonelements.zacharyrmckee.com"
+
+	]
+}
